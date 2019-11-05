@@ -1,53 +1,40 @@
 .backImg {
-  /* max-height: 100%; */
-  min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: auto;
+  position: fixed;
   font-family: 'Abel', sans-serif;
   color: white;
   z-index: -1;
-  /* background-image: url("../images/background.jpg"); */
-  /* height: 700px; */
-  /* background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: -1;
-  background-repeat: no-repeat; */
+  
 }
 
-/* .myPic {
-  position: absolute;
-  height: 350px;
-  width: 638px;
-  margin-top: 177px;
-  margin-left: 92px;
-  transform: rotate(-0.7deg);
-  clip-path: polygon(0 0, 100% 0, 100% 99%, 0% 100%);
-  border-radius: 6px;
-} */
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
 
 .myPic {
-  position: absolute;
-  height: 22em;
-  width: 40em;
-  margin-top: 11em;
-  margin-left: 5.5em;
-  transform: rotate(-0.7deg);
-  clip-path: polygon(0 0, 100% 0, 100% 99%, 0% 100%);
-  border-radius: 6px;
+  /* position: fixed;
+  height: 440px;
+  width: 820px;
+  margin-top: 215px;
+  margin-left: 101px;
+  transform: rotate(-0.7deg); */
+  /* clip-path: polygon(0 0, 100% 0, 100% 99%, 0% 100%); */
+  border: red 1px solid;
+  
 }
 
 
 .profText {
-  height: 310px;
-  width: 550px;
-  margin-top: 200px;
-  margin-left: 790px;
-  transform: rotate(1.7deg);
+  /* position: fixed;
+  height: 390px;
+  width: 700px;
+  margin-top: 255px;
+  margin-left: 985px;
+  transform: rotate(1.7deg); */
   color: black;
   font-weight: bold;
   font-size: 20px;
@@ -55,7 +42,8 @@
 }
 
 .nav {
-flex-wrap: nowrap;
+margin: auto;
+margin-top: 20px;
 }
 
 a {
@@ -64,19 +52,10 @@ a {
 
 li {
   padding-left: 20px;
-}
-
-.vertical-nav {
-  display: flex;
-  padding-left: 100px;
-}
+} 
 
 ul {
-  
-  margin: auto;
-  width: 60%;
-  font-size: 40px;
-  padding-right: 40px;
+  font-size: 40px;  
 }
 
 #proj1 {
@@ -131,13 +110,23 @@ ul {
   margin-top: 80px;
 } */
 
-@media screen and (max-width: 1024px){
-  img.backImg {
-  left: 50%;
-  margin-left: -512px; }
+/* .col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;} */
 
-  img.myPic {
-    width: 100%;
+/* @media screen and (min-width: 1024px){
+  .myPic {
+    width: 100px;
+    height: 100px;
+  } 
   
-  }
-}
+} */
