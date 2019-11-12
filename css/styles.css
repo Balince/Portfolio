@@ -26,29 +26,50 @@ p {
 
 .myPic {
   width: 106%;
-  height: 57vh;
-  max-height: 57vh;
+  height: 58vh;
+  max-height: 58vh;
 }
 
-.navbar {
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  padding-top: 1.4vh;
+  /* padding-left: 23.5vw; */
+  /* margin-left: 23.5vw; */
+}
+
+li a {
+  display: block;
+  font-size: 1.9em;
+  color: white;
+  padding: 1.3vh 2.1vw;
+  text-decoration: none;
+  margin-left: 3vw;
+}
+
+/* .navbar {
   display: flex;
   padding-top: 1.4vh;
-  max-width: 10%;
-  padding-left: 22vw;
+  max-width: 5%;
+  padding-left: 23.5vw;
   
 }
 
 .navbar a {
-  font-size: 1.7em;
+  font-size: 1.9em;
   color: white;
-  padding: 1.3vh 1.6vw;
+  padding: 1.3vh 2.1vw;
   text-decoration: none;
-  margin-left: 50%;
+  margin-left: 3vw;
   
-}
+} */
 
 .container {
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Column container */
@@ -59,7 +80,7 @@ p {
   align-items: flex-start;
   /* border: 2px solid yellow; */
   margin-top: 4%;
-  margin-left: 3%;
+  margin-left: 2.5%;
   max-width: 95%;
   width: 95%;
 
@@ -74,21 +95,47 @@ transform: rotate(-0.9deg);
 
 .col-2 {
   width: 50%;
-  margin-left: 5%;
+  margin-left: 3.5%;
   transform: rotate(1.9deg);
   }
   
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1650px) {
+  .columns {  
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+    margin-top: 4.6%;
+    margin-left: 2.7%;
+    max-width: 95%;
+    width: 95%;
+  
+  }
+
+  .myPic {
+    width: 106%;
+    height: 58vh;
+    max-height: 58vh;
+  }
+}
+
 @media screen and (max-width: 1615px) {
   .columns {  
     display: flex;
     align-items: flex-start;
     /* border: 2px solid yellow; */
     margin-top: 4.5%;
-    margin-left: 3%;
+    margin-left: 2.7%;
     max-width: 95%;
     width: 95%;
   
+  }
+
+  .myPic {
+    width: 106%;
+    height: 58vh;
+    max-height: 58vh;
   }
 }
 
@@ -101,6 +148,22 @@ transform: rotate(-0.9deg);
     /* border: 2px solid yellow; */
     margin-top: 5%;
     margin-left: 3%;
+    max-width: 95%;
+    width: 95%;
+  
+  }
+  
+}
+
+@media screen and (max-width: 1300px) {
+
+  /* Column container */
+  .columns {  
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+    margin-top: 6%;
+    margin-left: 2.7%;
     max-width: 95%;
     width: 95%;
   
