@@ -171,6 +171,25 @@ transform: rotate(-0.9deg);
   
 }
 
+@media screen and (max-width: 1360px) {
+  .columns {  
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+    margin-top: 2.7%;
+    margin-left: 2.7%;
+    max-width: 95%;
+    width: 95%;
+  
+  }
+
+  .myPic {
+    width: 106%;
+    height: 58vh;
+    max-height: 58vh;
+  }
+}
+
 /* #proj1 {
   position: absolute;
   height: 389px;
