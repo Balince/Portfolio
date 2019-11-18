@@ -9,10 +9,6 @@ body {
   padding: 0;
 }
 
-p {
-  font-size: 2em;
-}
-
 .backImg {
   position: fixed;
   z-index: -1;
@@ -24,11 +20,37 @@ p {
 
 }
 
-.myPic {
-  width: 106%;
-  height: 58vh;
-  max-height: 58vh;
+#proj1 {
+  width: 101%;
+  height: 59vh;
+  max-height: 59vh;
+  transform: rotate(-0.2deg);
+  clip-path: polygon(0 0, 100% 0, 99% 96%, 0% 98%);
 }
+
+#proj1:hover {
+  opacity: 1;;
+}
+
+#proj2 {
+  width: 99%;
+  height: 65vh;
+  max-height: 65vh;
+  /* transform: rotate(1.7deg); */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 74% 94%, 77% 77%, 68% 75%, 65% 94%, 2% 91%);
+}
+
+#projv2 {
+  display: none;
+  width: 101%;
+  height: 59vh;
+  max-height: 59vh;
+  transform: rotate(-0.2deg);
+  clip-path: polygon(0 0, 100% 0, 99% 96%, 0% 98%);
+}
+
+
+
 
 ul {
   display: flex;
@@ -41,7 +63,7 @@ ul {
   /* margin-left: 23.5vw; */
 }
 
-li a {
+li {
   display: block;
   font-size: 1.9em;
   color: white;
@@ -49,23 +71,6 @@ li a {
   text-decoration: none;
   margin-left: 3vw;
 }
-
-/* .navbar {
-  display: flex;
-  padding-top: 1.4vh;
-  max-width: 5%;
-  padding-left: 23.5vw;
-  
-}
-
-.navbar a {
-  font-size: 1.9em;
-  color: white;
-  padding: 1.3vh 2.1vw;
-  text-decoration: none;
-  margin-left: 3vw;
-  
-} */
 
 .container {
   margin: 0 auto;
@@ -88,16 +93,31 @@ li a {
 
 .col-1 {
 width: 50%;
-margin-right: 5%;
+margin-right: 2%;
 transform: rotate(-0.9deg);
 
 }
 
 .col-2 {
   width: 50%;
-  margin-left: 3.5%;
+  margin-left: 1%;
   transform: rotate(1.9deg);
   }
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+}
+  
+  /* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+    background-color: #666;
+    color: white;
+}
   
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 
@@ -155,6 +175,25 @@ transform: rotate(-0.9deg);
   
 }
 
+@media screen and (max-width: 1360px) {
+  .columns {  
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+    margin-top: 2.7%;
+    margin-left: 2.7%;
+    max-width: 95%;
+    width: 95%;
+  
+}
+
+  .myPic {
+    width: 106%;
+    height: 58vh;
+    max-height: 58vh;
+  }
+}
+
 @media screen and (max-width: 1300px) {
 
   /* Column container */
@@ -170,42 +209,3 @@ transform: rotate(-0.9deg);
   }
   
 }
-
-@media screen and (max-width: 1360px) {
-  .columns {  
-    display: flex;
-    align-items: flex-start;
-    /* border: 2px solid yellow; */
-    margin-top: 2.7%;
-    margin-left: 2.7%;
-    max-width: 95%;
-    width: 95%;
-  
-  }
-
-  .myPic {
-    width: 106%;
-    height: 58vh;
-    max-height: 58vh;
-  }
-}
-
-/* #proj1 {
-  position: absolute;
-  height: 389px;
-  width: 689px;
-  margin-top: 195px;
-  margin-left: -232px;
-  transform: rotate(-0.7deg);
-  clip-path: polygon(0 0, 100% 0, 99% 96%, 0% 98%);
-}
-
-#proj2 {
-  position: absolute;
-  height: 412px;
-  width: 676px;
-  margin-top: 200px;
-  margin-left: 479px;
-  transform: rotate(1.5deg);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 74% 94%, 77% 77%, 68% 75%, 65% 94%, 2% 91%);
-} */
