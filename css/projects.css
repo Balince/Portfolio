@@ -20,6 +20,33 @@ body {
 
 }
 
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.col-1:hover .image {
+  opacity: 0.3;
+}
+
+/* .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+} */
+
+.col-1:hover .middle {
+  opacity: 1;
+}
+
 #proj1 {
   width: 101%;
   height: 59vh;
@@ -28,9 +55,6 @@ body {
   clip-path: polygon(0 0, 100% 0, 99% 96%, 0% 98%);
 }
 
-#proj1:hover {
-  opacity: 1;;
-}
 
 #proj2 {
   width: 99%;
