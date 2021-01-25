@@ -199,6 +199,22 @@ transform: rotate(-0.9deg);
   
 }
 
+@media screen and (max-width: 1450px) {
+
+  /* Column container */
+  .columns {  
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid yellow; */
+    margin-top: 5%;
+    margin-left: 3%;
+    max-width: 95%;
+    width: 95%;
+  
+  }
+  
+}
+
 @media screen and (max-width: 1360px) {
   .columns {  
     display: flex;
