@@ -1,98 +1,38 @@
-let proj1 = $(".proj1").show();
-let proj2 = $(".proj2");
-let proj3 = $(".proj3");
+$(document).ready(function () {
 
-$(".button1").click(function(){
+let proj1 = $(".projInfo1")
+let proj2 = $(".projInfo2")
+let proj3 = $(".projInfo3")
+
+
+// (function($) {
+    $(function() {
+        $(".jEnd").accordion({ 
+            header: "h3", 
+            collapsible: true, 
+            active: 0, 
+            animate: 100,
+            heightStyle: "content"
+        });
+   });
+// })(jQuery);
+
+
+$(".button1").on("click", function(){
     proj1.show();
-    proj2.hide();
-    proj3.hide();
-})
+    proj2.hide("explode");
+    proj3.hide("explode");
+});
 
-$(".button2").click(function(){
-    proj1.hide();
+    $(".button2").on("click", function() {
     proj2.show();
-    proj3.hide();
-})
+    proj1.hide("blind", {direction: "right"}, 1000);
+    proj3.hide("explode");
+});
 
-$(".button3").click(function(){
-    proj1.hide();
-    proj2.hide();
+    $(".button3").on("click", function() {
     proj3.show();
+    proj1.hide( "explode", { direction: "up" });
+    proj2.hide( "explode", { direction: "up" });
 })
-
-
-
-
-
-
-// switch (x) {
-//     case 0:
-//         proj = $("#hide").click(function(){
-//             $("p").show();
-//           });
-//       break;
-//     case 1:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-//       break;
-//     case 2:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-//       break;
-//     case 3:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-//       break;
-//     case 4:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-//       break;
-//     case 5:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-//       break;
-//     case 6:
-//         proj = $("#hide").click(function(){
-//             $("p").hide();
-//           });
-
-
-
-
-
-
-
-
-
-
-
-
-// $(".proj2btn").click(function() {
-//     $("#projv2").show();
-//     $("#proj1").hide();
-// });
-
-// $(".proj1btn").click(function() {
-//     $("#proj1").show();
-//     $("#projv2").hide();
-// });
-
-// // $(".col-2").click(function() {
-// //     $(".col-2").toggle();
-// // });
-
-
-// var header = document.getElementById("myDIV");
-// var btns = header.getElementsByClassName("btn");
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("active");
-//   current[0].className = current[0].className.replace(" active", "");
-//   this.className += " active";
-//   });
-// }
+});

@@ -1,65 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
-p, h1, h2, h3 {
+p, ul, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
 
-img {
+.resImg {
   max-width: 100%;
   height: auto;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 30% 70%;
   grid-template-areas: 
-    "aboutMe"
-    "skills"
-    "projects"
-    "contact";
+    "myImg aboutMe"
+    "skill skillInfo"
+    "projects projects"
+    "contact contact";
 }
 
 .aboutMe {
   grid-area: aboutMe;
-  display: flex;
   background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid black;
+}
+
+.myImg {
+  grid-area: myImg;
+  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resImg {
+  border-radius: 75px;
 }
 
 .myInfo {
   flex-direction: column;
+  margin: 0 auto;
+  padding: 2rem 10rem 2rem 5rem;
+  font-size: 1.3em;
+  line-height: 2.2rem;
 }
 
-.skills {
-  grid-area: skills;
+.skill {
+  grid-area: skill;
+  background-color: lightblue;
+}
+
+.skillInfo {
+  grid-area: skillInfo;
   background-color: lightblue;
   display: flex;
+  align-items: center;
 }
 
 ul {
   flex-direction: column;
+  column-count: 4;
+  column-gap: 2rem;
 }
 
 .projects {
   grid-area: projects;
-  display: flex;
+  /* height: 300px; */
 }
 
-button {
-  
-  flex-direction: row;
-}
-
-.proj1, .proj2, .proj3 {
-  display: none;
-  
+.projInfo1, .projInfo2, .projInfo3 {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
 }
 
 .contact {
   grid-area: contact;
   background-color: lightyellow;
 }
+
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin: 2px 0 0 0;
+  padding: .5em .5em .5em .7em;
+  font-size: 100%;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-top-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 0;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid orange;
+  background: #fff;
+  font-weight: normal;
+  color: #212121;
+}
+
+.ui-accordion-header-collapsed {
+  background-color: orange;
+}
+
+#accordion .ui-icon { display: none; }
+#accordion .ui-accordion-header a { padding-left: 0; }
+
+/* @media (max-width: 1400px) {
+   
+
+  .myInfo {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .resImg {
+    max-width: 25%;
+    height: auto;
+}
+} */
