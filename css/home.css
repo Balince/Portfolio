@@ -31,15 +31,14 @@ p, ul, h1, h2, h3 {
 
 .container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
   grid-template-areas: 
-    "aboutMe aboutMe"
+    "myImg aboutMe"
     "skill skillInfo"
     "projects projects"
     "contact contact";
+    background-color: rgb(240, 240, 240);
 }
-
-
 
 .animate-in {
   height: 100%;
@@ -84,8 +83,6 @@ nav p {
   margin: auto;
 }
 
-
-
 .navLink {
   display: inline-block;
   padding: 1.5rem .4rem; 
@@ -120,20 +117,28 @@ a:focus {
 .aboutMe {
   grid-area: aboutMe;
   background-color: rgb(240, 240, 240);
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  margin: 3rem 0;
+  border-right: 1px solid black;
+  border-top-right-radius: -500px;
+  border-bottom-right-radius: -500px;
+  /* border-radius: 70px; */
+}
+
+.pic {
+  background-color: rgb(240, 240, 240);
 }
 
 .myImg {
   grid-area: myImg;
   background-color: rgb(240, 240, 240);
-  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin: 3rem 0;
+  padding: 3rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.resImg {
-  border-radius: 75px;
+  border-radius: 70px;
 }
 
 .myInfo {
@@ -142,6 +147,11 @@ a:focus {
   padding: 2rem 10rem 2rem 5rem;
   font-size: 1.3em;
   line-height: 2.2rem;
+}
+
+.name, .title {
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .skill {
@@ -180,6 +190,10 @@ ul {
   grid-area: contact;
   background-color: lightyellow;
 }
+
+/* .pCenter {
+  margin: 0 100px;
+} */
 
 .ui-accordion .ui-accordion-header {
   display: block;
