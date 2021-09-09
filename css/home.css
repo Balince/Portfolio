@@ -12,18 +12,6 @@ body {
   
 }
 
-
-
-/* @-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-} */
-
 p, ul, h1, h2, h3 {
   margin: 0;
   padding: 0;
@@ -38,20 +26,6 @@ p, ul, h1, h2, h3 {
     "projects projects"
     "contact contact";
     background-color: rgb(240, 240, 240);
-}
-
-.animate-in {
-  height: 100%;
-  transition-property: display;
-  transition-duration: 5s;
-  transition-delay: 3s;
-}
-
-.animate-out {
-  display: none;
-  /* transition-property: display;
-  transition-duration: 2s;
-  transition-delay: 3s; */
 }
 
 nav {
@@ -156,12 +130,12 @@ a:focus {
 
 .skill {
   grid-area: skill;
-  background-color: lightblue;
+  background-color: white;
 }
 
 .skillInfo {
   grid-area: skillInfo;
-  background-color: lightblue;
+  background-color: white;
   display: flex;
   align-items: center;
 }
@@ -174,7 +148,7 @@ ul {
 
 .projects {
   grid-area: projects;
-  /* height: 300px; */
+  height: 300px;
 }
 
 .projInfo1, .projInfo2, .projInfo3 {
@@ -191,37 +165,6 @@ ul {
   background-color: lightyellow;
 }
 
-/* .pCenter {
-  margin: 0 100px;
-} */
-
-.ui-accordion .ui-accordion-header {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  margin: 2px 0 0 0;
-  padding: .5em .5em .5em .7em;
-  font-size: 100%;
-}
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-  border-top-right-radius: 0;
-}
-.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
-  border-top-left-radius: 0;
-}
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  border: 1px solid orange;
-  background: #fff;
-  font-weight: normal;
-  color: #212121;
-}
-
-.ui-accordion-header-collapsed {
-  background-color: orange;
-}
-
-#accordion .ui-icon { display: none; }
-#accordion .ui-accordion-header a { padding-left: 0; }
 
 /* @media (max-width: 1400px) {
    

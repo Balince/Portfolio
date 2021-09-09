@@ -1,47 +1,28 @@
-$(document).ready(function () {
+const name = document.getElementById('name')
+const password = document.getElementById('password')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
 
-    $(".navLink").click(function(){
-        $(".container").addClass("animate-out")
-    });
+form.addEventListener('submit', (e) => {
+  let messages = []
+  if (name.value === '' || name.value == null) {
+    messages.push('Name is required')
+  }
 
-// let proj1 = $(".projInfo1")
-// let proj2 = $(".projInfo2")
-// let proj3 = $(".projInfo3")
+  if (password.value.length <= 6) {
+    messages.push('Password must be longer than 6 characters')
+  }
 
+  if (password.value.length >= 20) {
+    messages.push('Password must be less than 20 characters')
+  }
 
-// // (function($) {
-//     $(function() {
-//         $(".jEnd").accordion({ 
-//             header: "h3", 
-//             collapsible: true, 
-//             active: 0, 
-//             animate: 100,
-//             heightStyle: "content"
-//         });
-//    });
-// // })(jQuery);
+  if (password.value === 'password') {
+    messages.push('Password cannot be password')
+  }
 
-
-// $(".button1").on("click", function(){
-//     proj1.show();
-//     proj2.hide("explode");
-//     proj3.hide("explode");
-// });
-
-// $(".button2").on("click", function() {
-//     proj2.show();
-//     proj1.hide("blind", {direction: "right"}, 1000);
-//     proj3.hide("explode");
-// });
-
-// $(".button3").on("click", function() {
-//     proj3.show();
-//     proj1.hide( "explode", { direction: "up" });
-//     proj2.hide( "explode", { direction: "up" });
-// })
-
-
-
-
-});
-
+  if (messages.length > 0) {
+    e.preventDefault()
+    errorElement.innerText = messages.join(', ')
+  }
+})
